@@ -7,8 +7,8 @@ const usersRoutes = require('./routes')
 
 const app = express()
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/auth'
-const PORT = process.env.PORT || 3001
+const MONGODB_URI = process.env.ATLAS_ACTIONS || 'mongodb://localhost/auth'
+const PORT = process.env.PORT || 8081
 
 mongoose.set('useCreateIndex', true)
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
