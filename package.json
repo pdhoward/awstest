@@ -1,12 +1,12 @@
 {
-  "name": "rthauthserver",
+  "name": "awstest",
   "version": "1.0.0",
   "description": "Sample security protocol",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"node server.js\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
@@ -21,10 +21,8 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.1.0",
     "mongoose": "5.3.8",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "concurrently": "^4.1.0"
   },
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
-  }
+  "devDependencies": {}
 }
