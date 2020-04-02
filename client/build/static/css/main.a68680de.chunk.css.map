@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,yBACC,YAAa,CACb,cACD,CAEA,QACC,kBACD","file":"main.a68680de.chunk.css","sourcesContent":[".NavBar a, .NavBar button {\r\n\tmargin: 0 5px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.NavBar {\r\n\tmargin-bottom: 20px\r\n}"]}
