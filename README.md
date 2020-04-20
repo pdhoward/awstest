@@ -1,10 +1,12 @@
-# React Application with JWT Authentication
+# React Application, JWT Authentication and AWS deployment
 
 ### Overview
 
-This is an example application that serves an ExpressJS JSON api to a React client application. The React application is configured for a basic JWT authentication flow **WITHOUT** using redux. Great for those of you that are somewhat familiar with Node, Express, and Mongoose, but want to see an implementation of React + React Router with JWT authentication.
+This is an example application that serves an ExpressJS JSON api to a React client application. The React application is configured for a basic JWT authentication flow **WITHOUT** using redux. This is a basic auth model used by developers for Strategic Machines products and clients.
 
-The React client app could easily be restructured to keep current user information in a Redux Store. Give it a shot!
+The React client app could easily be restructured to keep current user information in a Redux Store.
+
+Note that ebextensions and eb config files are included, providing a model for deployment to AWS via the eb cli.
 
 ### Installation + Development
 
@@ -16,11 +18,11 @@ The React client app could easily be restructured to keep current user informati
 
    *The only environment variable you **have** to declare in development is `JWT_SECRET`*
 
-   In the `.env` file, you can declare the following environment variables: `JWT_SECRET`, `MONGODB_URI`, and `PORT`. For example:
+   In the `.env` file, you can declare the following environment variables: `JWT_SECRET`, `ATLAS_AUTH`, and `PORT`. For example:
 
    ```
-   JWT_SECRET=BOOOOOOOOOOOOOM
-   MONGODB_URI=mongodb://localhost/react-express-jwt
+   JWT_SECRET=mysupersecret
+   MONGODB_URI=mongodb://localhost/auth
    PORT=3001
    ```
 
@@ -63,14 +65,14 @@ mySpecialRouter.post("/comments", (req, res) => {
 module.exports = mySpecialRouter
 ```
 
-
-
 ### Technologies
 - React client application business in the front
 - NodeJS + Express + Mongoose party in the back
 - React Router 4.*
 - Milligram CSS so it doesn't look like garbage
 - JSON Web Token authentication flow
+- ATLAS Mongodb or Mongodb localhost
+- AWS Elastic Beanstalk (from the command line)
 
 ### Important Notes
 
