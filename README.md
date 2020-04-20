@@ -34,7 +34,6 @@ Note that ebextensions and eb config files are included, providing a model for d
 7. Now for the client application. `cd client`
 8. Install the client app's dependencies with `npm install`
 9. From the client directory, run `npm start` to boot up the client application.
-10. $$$ Profit
 
 ### Usage
 
